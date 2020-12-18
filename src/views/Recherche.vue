@@ -23,7 +23,8 @@ export default {
     data() {
     return {
       data: {
-        searchText: 'Nintendo Switch'
+        searchText: 'Nintendo Switch',
+        ordre: "ok"
       }
     }
   },

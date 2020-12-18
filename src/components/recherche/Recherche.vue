@@ -17,7 +17,13 @@
           ></v-text-field>
 
 
-     <!--      <v-btn
+   <!--         <v-checkbox
+            v-model="data.ordre"
+            label="Ordre"
+            outlined
+          ></v-checkbox>
+
+         <v-btn
         color="success"
         outlined
         @click="resultats"

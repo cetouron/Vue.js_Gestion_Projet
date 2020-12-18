@@ -8,11 +8,27 @@
           <v-row
             sm="12"
             md="4"
-            v-for="item in result"
+            v-for="item in result.slice(0,6)" 
             :key="item.name"
                       >
 
-        <VerticalProduct :product="item" :i="i" :addToCart="addToCart" />
+             <v-card
+              outlined
+
+              >
+            <v-img
+              :src="item.image"
+              height="200px"
+            />
+
+            <v-card-title>
+              {{ item.name }}
+            </v-card-title>
+
+            <v-card-subtitle>
+              ${{ item.price }}
+            </v-card-subtitle>
+          </v-card>
 
       </v-row>
     </v-col>
@@ -37,6 +53,10 @@ export default {
   computed: {
     ...mapState(['products', 'cart']),
     result: function(){
+     /*   if (this.data.ordre=="ok") {
+                this.products.orderBy(this.products.price);
+
+        } */
             return this.products.filter((item) => {
                 return item.name.toLowerCase().includes(this.data.searchText.toLowerCase());
             });

@@ -40,8 +40,7 @@ export default {
       image: VueTypes.string.isRequired
     }),
     addToCart: VueTypes.func.isRequired,
-    i: VueTypes.integer.isRequired,
-    search: VueTypes.string
-  }
+    i: VueTypes.integer.isRequired
+      }
 }
 </script>
