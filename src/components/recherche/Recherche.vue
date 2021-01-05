@@ -5,6 +5,7 @@
     style="position: relative;"
   >
     <v-container class="fill-height">
+      <v-col sm="10" offset-sm="1" md="8" offset-md="2">
       <v-row
           cols="12"
           sm="56"
@@ -16,12 +17,12 @@
             outlined
           ></v-text-field>
 
-
-   <!--         <v-checkbox
-            v-model="data.ordre"
-            label="Ordre"
+        <v-text-field
+            v-model="data.prixMax"
+            label="Prix Maximum"
             outlined
-          ></v-checkbox>
+          ></v-text-field>
+          
 
          <v-btn
         color="success"
@@ -29,9 +30,16 @@
         @click="resultats"
       >
         <v-icon>mdi-book-search</v-icon>
-      </v-btn> -->
-        </v-row>
+      </v-btn>
 
+          <v-checkbox
+            v-model="data.ordre"
+            label="Ordre"
+            outlined
+          ></v-checkbox>
+
+        </v-row>
+    </v-col>
 
     </v-container>
   </v-sheet>

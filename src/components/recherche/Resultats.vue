@@ -1,43 +1,31 @@
 <template>
   <v-container >
 
+      <v-col sm="10" offset-sm="1" md="8" offset-md="2">
         <h2>Résultats de votre recherche pour {{data.searchText}} <v-btn to="store" text small color="primary">View All</v-btn></h2>
+      </v-col>
 
-
-        <v-col>
-          <v-row
-            sm="12"
+        <v-row>
+          <v-col sm="10" offset-sm="1" lg="8" offset-lg="2">
+          <v-row>
+          <v-col
+            sm="6"
             md="4"
-            v-for="item in result.slice(0,6)" 
+            v-for="(item, i) in result" 
             :key="item.name"
                       >
 
-             <v-card
-              outlined
-
-              >
-            <v-img
-              :src="item.image"
-              height="200px"
-            />
-
-            <v-card-title>
-              {{ item.name }}
-            </v-card-title>
-
-            <v-card-subtitle>
-              ${{ item.price }}
-            </v-card-subtitle>
-          </v-card>
-
+             <VerticalProduct :product="item" :i="i" :addToCart="addToCart" />
+  </v-col>
       </v-row>
     </v-col>
+     </v-row> 
   </v-container>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-//import VerticalProduct from '@/components/cards/VerticalProduct.vue'
+import VerticalProduct from '@/components/cards/VerticalProduct.vue'
 
 export default {
    props: {
@@ -45,7 +33,7 @@ export default {
     data: Object
   },
   components: {
-    //VerticalProduct
+    VerticalProduct
   },
   data() {
     return {}
@@ -53,20 +41,32 @@ export default {
   computed: {
     ...mapState(['products', 'cart']),
     result: function(){
-     /*   if (this.data.ordre=="ok") {
-                this.products.orderBy(this.products.price);
 
-        } */
-            return this.products.filter((item) => {
-                return item.name.toLowerCase().includes(this.data.searchText.toLowerCase());
-            });
-        }, 
-    searchInLowerCase() {
-    return this.data.searchText.toLowerCase().trim();
-    },
-    itemInLowerCase() {
-    return this.products.name.toLowerCase().trim();
-    }
+      var produits = this.products;
+      var prixMa;
+    
+      if (this.data.prixMax == '') {
+
+       prixMa = 10000000;
+      }
+      else 
+      {
+       prixMa = this.data.prixMax;
+      }
+
+
+       if (this.data.ordre==true) {
+                produits.sort(function(a, b) { return a.price - b.price;});
+
+        } 
+
+            return produits
+            .filter((item) => {
+                return item.name.toLowerCase().includes(this.data.searchText.toLowerCase()); })
+            .filter((item) => { return item.price < prixMa})
+
+        }
+
   },
   methods: {
     ...mapMutations(['updateSnackbar', 'addItemToCart']),
