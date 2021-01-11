@@ -24,13 +24,13 @@
           ></v-text-field>
           
 
-         <v-btn
+    <!--     <v-btn
         color="success"
         outlined
         @click="resultats"
       >
         <v-icon>mdi-book-search</v-icon>
-      </v-btn>
+      </v-btn> -->
 
           <v-checkbox
             v-model="data.ordre"

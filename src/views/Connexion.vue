@@ -1,10 +1,8 @@
 <template>
   <v-container>
-    <v-row>
  
         <Formulaire />
 
-    </v-row>
   </v-container>
 </template>
 

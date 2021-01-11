@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar>
-      <v-toolbar-title>Awesome Shop</v-toolbar-title>
+      <v-toolbar-title>Tut'up</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -20,17 +20,22 @@
           <v-icon>mdi-home</v-icon>
           Home
         </v-btn>
-        <v-btn to="store" text>
-          <v-icon>mdi-store</v-icon>
+     <!--      <v-btn to="store" text>
+        <v-icon>mdi-store</v-icon>
           Store
-        </v-btn>
+        </v-btn> -->
         <v-btn to="cart" text>
           <v-icon>mdi-cart</v-icon>
-          Cart
+          Propositions
         </v-btn>
          <v-btn to="recherche" text>
           <v-icon>mdi-feature-search</v-icon>
           Recherche
+        </v-btn>
+
+        <v-btn to="connexion" text>
+          <v-icon>mdi-account</v-icon>
+          Connexion
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>

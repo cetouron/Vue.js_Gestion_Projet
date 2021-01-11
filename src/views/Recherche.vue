@@ -20,7 +20,7 @@ export default {
     data() {
     return {
       data: {
-        searchText: 'Nintendo Switch',
+        searchText: '',
         prixMax: '',
         ordre: false
       }

@@ -9,9 +9,9 @@
         align="center"
         justify="center"
       >
-        <h1 class="display-3 hidden-xs-only">Welcome to Awesome Shop!</h1>
+        <h1 class="display-3 hidden-xs-only">Tut'up</h1>
         <h1 class="text-center display-1 hidden-sm-and-up">
-          Welcome to Awesome Shop!
+          Bienvenue sur Tut'up, le rendez-vous de la réussite. 
         </h1>
       </v-row>
 

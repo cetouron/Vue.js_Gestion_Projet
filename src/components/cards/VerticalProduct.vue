@@ -23,7 +23,7 @@
         @click="addToCart(i)"
       >
         <v-icon>mdi-plus</v-icon>
-        Add to Cart
+        Contacter
       </v-btn>
     </v-card-actions>
   </v-card>

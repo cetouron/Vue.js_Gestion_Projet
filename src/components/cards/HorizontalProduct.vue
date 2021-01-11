@@ -33,7 +33,7 @@
           @click="updateCart(i)"
         >
           <v-icon small>mdi-minus</v-icon>
-          Remove from Cart
+          Supprimer
         </v-btn>
         <v-btn
           v-else
@@ -43,7 +43,7 @@
           @click="updateCart(i)"
         >
           <v-icon small>mdi-plus</v-icon>
-          Add to Cart
+          Contacter
         </v-btn>
       </div>
     </div>

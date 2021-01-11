@@ -1,17 +1,17 @@
 <template>
   <v-container>     
-        <Register />
+        <Profil />
  
 
   </v-container>
 </template>
 
 <script>
-import Register from '@/components/register/Register.vue'
+import Register from '@/components/profil/Profil.vue'
 
 export default {
   components: {
-    Register
+    Profil
   }
 }
 </script>
