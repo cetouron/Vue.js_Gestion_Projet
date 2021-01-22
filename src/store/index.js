@@ -15,6 +15,7 @@ export default new Vuex.Store({
     },
     cart: [] // { itemId, quantity }
   },
+
   mutations: {
     addItemToCart(state, payload) {
       const { itemId, quantity } = payload

@@ -1,32 +1,91 @@
 export default [
   {
     image: '/img/products/livre.jpg',
-    name: 'Mathémathique',
-    price: 29
+    name: 'Louis',
+    price: 29,
+    note: 4.3,
+    nbAvis: 16,
+    matiere: 'Mathémathique, Espagnol, SVT, Italien, Histoire, Géographie',
+    bio: "Etudiant à la fac Paris Sud depuis l'âge de mes 18 ans, j'ai redoublé ma 4ème 2 fois, mais depuis je fais des études. J'ai un BAC S en poche, mais j'aime bien aussi les langues, ayant des racines italiennes, j'aime aussi a partager mon goût de l'Histoire et de la Géographie.",
+    formations: "DUT en histoire de l'art j'ai aussi pu faire 3 ans au sein de l'institut pour la préservation des reliques egyptiennes. J'ai fait quelques années d'enseignement comme remplacement au collège Saint-Louis de Villefranche.",
+    autres: "J'ai un groupe de rock avec des amis, on fait des concerts, j'ai l'habitude d'être auprès de mon public, devoir dialoguer avec votre enfant ne sera pour moi d'aucune difficulté.",
+    comm1:"Louis est un jeune garçon sérieux 👍",
+    comm2:"Ma fille actuellement en Terminal adore Louis et redemande à avoir d'autres cours particulier avec lui plus souvent",
+    comm3:'C vrémant quelkun de bain, mairci a Louis',
+    comm4:"Je mets 4 étoiles"
   },
   {
     image: '/img/products/livre.jpg',
-    name: 'Français',
-    price: 19
+    name: 'Juliette',
+    price: 19,
+    note: 3.7,
+    nbAvis: 13,
+    matiere: 'Anglais, Espagnol, SVT, Italien',
+    bio: "Bonjour je m'apelle Juliette, j'ai 26 ans. Dynamique et doté d'un sens de la sociabilité et du goût pour l'apprentissage, je fais du tutorat depuis miantenant 6 ans auprès d'élève de tout niveau principalement en langue mais aussi en Science et vie de la Terre",
+    formations: "Après un BAC L avec option LEA, j'ai fait une faculté de langue durant 5 ans dans l'objectif de devenir traductrice. Le métier étant fait de nombreuse petit mission, je peux donc m'adonner à l'apprentissage lorsque je n'ai pas de missions.",
+    autres: "J'ai été championne de 110 mètre haies en CM2 et championne régionale des Hauts de France en aquabike. J'ai aussi des notions de Chinois.",
+    comm1:"Juliette est vraiment super, elle aime les langues et sait partager sa passion",
+    comm2:"Bonjour je veux reprendre rendez-vous, seriez vous disponible demain à 17h30 ?",
+    comm3:"Peut mieux faire, mon fils n'apprend vraiment rien et ces notes sont toujours aussi basses..."
+    },
+  {
+    image: '/img/products/livre.jpg',
+    name: 'Thibault',
+    price: 10,
+    note: 3.1,
+    nbAvis: 6,
+    matiere: 'Italien, Physique-Chimie, Géographie',
+    bio: "Salut moi s'est Tibz, je préfère briser la galce tout de suite on fait poto poto avec ton mioche. Si il est au collège c'est mieux franchement, ils sont plus cools, un peu comme moi tu vois. Hâte qu'on se capte pour bosser mes sujets t'as vu c'est athlétisme ya Géo, Physique et Italien, c'est ma came.",
+    formations: "C'est la question qui fâche, bon au moins j'ai mon BAFA c'est cool pour le moment. Je vais en prépa pour sauver les animaux, un peu, j'essaie de suivre, faut faire survivre les espaces pour nos petites bêtes. Et pour ça faut éveiller les gosses.",
+    autres: "J'ai aussi un commerce parralèle en vrai pour vivre mais bon, alors contactez moi et mettez 5 étoiles vous aurez une réduction.",
+    comm1:"Italien ? Physique-Chimie ? Géographie ? Thibault",
+    comm2:"Une catastrophe ce garçon. Il arrive en retard, repart en avance, ne sait rien sur rien. Heureusement que je l'espionnais avec la webcam de mon fils, sinon je ne le saurais pas parce qu'il achète son silence.",
+    comm3:'Trop cool, je conceil 5 étoile, bonne qualité de travail',
+    comm4:"merci bg"
   },
   {
     image: '/img/products/livre.jpg',
-    name: 'Physique',
-    price: 10
+    name: 'Didier',
+    price: 30,
+    note: 4.7,
+    nbAvis: 35,
+    matiere: 'Mathémathique, Philosophie',
+    bio: "Didier, 43 ans professeur de Mathémathique depuis plus de 20 ans dans divers collège et lycée. Vos petites têtes blondes ne me font pas peur, et reciproquement. Ils vont aimer apprendre et bien apprendre. Résultats garantis, mes anciens élèves m'adorent. Aime la Philosophie à mes heures perdus.",
+    formations: "Diplômé de Maths-Sup de Lyon 1, j'ai fini professeur par un coucours de circonstance d'abord au collège avant de préférer les plus grands. Je suis donc disponible pour tous les niveaux et aiment avoir un complément de revenus avec le tutorat depuis une dizaine d'années.",
+    autres: "'Ce n'est pas la conscience qui détermine la vie, mais la vie qui détermine la conscience.' est ma citation préféré de Karl Marx, par là il souhaite signifier un nombre importants de concepts que determinent des notions de philosophie.",
+    comm1:"Didier, quel prof ! Incroyablement cultivé et bon. Les résultats sont là.",
+    comm2:"Passionnant autant en mathématique qu'en philosophie, Didier réssuit un tour de force.",
+    comm3:'Vous en aurez pour votre argent. Cher mais justifié.',
+    comm4:"Merci Didier, revenez quand vous voulez."
   },
   {
     image: '/img/products/livre.jpg',
-    name: 'Anglais',
-    price: 30
+    name: 'Sophie',
+    price: 9,
+    note: 1.3,
+    nbAvis: 5,
+    matiere: 'Français, Espagnol, Italien, Philosophie, Géographie',
+    bio: "J'ai besoin d'argent, alors j'essaie le tutorat, je commence, mais visiblement, bon, je ne suis pas encore super, mais je vais m'améliorer, donnez moi une chance s'il vous plait.",
+    formations: "J'étudie actuellement en L1. J'étais en L, j'ai eu mon Bac mention Bien pourtant, je fais un parcours pour tenter de devenir enseignante, c'est pour ça que je tente le tutorat. Merci pour votre bienveillance.",
+    autres: "J'ai d'autres activité à côté, je fais des Stream sur Twitch ou je joue à Fortnite, mon pseudo MissSophie43, je vous attends pour parler tutorat, j'essaie de faire quelques traductions dans différentes langues pour que les jeunes apprennent.",
+    comm1:"On sent qu'elle veut bien faire, mais c'est une catastrophe...",
+    comm2:"Si vous avez besoin d'argent, allez travailler à Macdo ou ailleurs, mais pas le tutorat",
+    comm3:"Elle est partie en pleurant après que mon fils lui ai dit 'Non, j'ai pas envie'",
+    comm4:"Si vous l'appelez, bon courage."
   },
   {
     image: '/img/products/livre.jpg',
-    name: 'Italien',
-    price: 9
-  },
-  {
-    image: '/img/products/livre.jpg',
-    name: 'Espagnol',
-    price: 25
+    name: 'Sebastien',
+    price: 25,
+    note: 2.1,
+    nbAvis: 7,
+    matiere: 'Mathémathique, Français,  Anglais, Espagnol, SVT, Italien, Physique-Chimie, Philosophie, Histoire, Géographie',
+    bio: "Je sais tout faire comme vous pouvez le lire. Non pas de la prétention mais croyez moi, je sait tous faire. Tous. Tu veux vérifer, et bien demandez moi d'être tutoré par moi. Signature de contrat pour un an de séance à heure et jour fixe.",
+    formations: "Mes formations ? C'est surfait, oui j'ai fait des choses dans la vie, mais pourquoi étaler mon CV comme ça, faites moi confiance. Je peux vous le donner en privée, je veux pas faire de l'ombre aux autres",
+    autres: "Si vous saviez le nombre d'autres domaines dans lesquelles je suis bon... celà ferait blémir pas mal d'entre vous. Musique, sport, politique et autres sujets, rien ne m'échappe. Lisez pas les comm' ils mentent.",
+    comm1:"Il ne veut pas faire de l'ombre aux autres, mais vu son melon, quand il vous approche il fait d'un coup nuit.",
+    comm2:"J'ai perdu 25 euros, et pour ceux qui le peuvent, fuyez. LOIN.",
+    comm3:'Il a le boulard mais bon en Mathématique niveau CM2, ça le fait...',
+    comm4:"Bavard mais parle pour ne rien dire et ne rien faire."
   }
 ]

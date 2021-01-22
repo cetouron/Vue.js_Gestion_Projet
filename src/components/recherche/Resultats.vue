@@ -1,13 +1,12 @@
 <template>
   <v-container >
 
-      <v-col sm="10" offset-sm="1" md="8" offset-md="2">
-        <h2>Résultats de votre recherche pour {{data.searchText}} <v-btn to="store" text small color="primary">View All</v-btn></h2>
+      <v-col sm="10" offset-sm="1" md="10" offset-md="2">
+        <h2>Résultats de votre recherche pour {{data.searchText}} </h2>
       </v-col>
-
+<!-- <v-btn to="store" text small color="primary">View All</v-btn> -->
         <v-row>
-          <v-col sm="10" offset-sm="1" lg="8" offset-lg="2">
-          <v-row>
+        
           <v-col
             sm="6"
             md="4"
@@ -18,8 +17,8 @@
              <VerticalProduct :product="item" :i="i" :addToCart="addToCart" />
   </v-col>
       </v-row>
-    </v-col>
-     </v-row> 
+    
+
   </v-container>
 </template>
 
@@ -43,7 +42,7 @@ export default {
     result: function(){
 
       var produits = this.products;
-      var prixMa;
+      var prixMa, matiere;
     
       if (this.data.prixMax == '') {
 
@@ -54,6 +53,14 @@ export default {
        prixMa = this.data.prixMax;
       }
 
+      if (this.data.searchText == 'Tout') {
+
+       matiere = '';
+      }
+      else 
+      {
+       matiere = this.data.searchText;
+      }
 
        if (this.data.ordre==true) {
                 produits.sort(function(a, b) { return a.price - b.price;});
@@ -62,8 +69,9 @@ export default {
 
             return produits
             .filter((item) => {
-                return item.name.toLowerCase().includes(this.data.searchText.toLowerCase()); })
-            .filter((item) => { return item.price < prixMa})
+                return item.matiere.toLowerCase().includes(matiere.toLowerCase()); })
+            .filter((item) => { return item.price <= prixMa})
+            .filter((item) => { return item.note >= this.data.note})
 
         }
 

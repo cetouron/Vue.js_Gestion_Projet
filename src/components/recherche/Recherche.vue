@@ -7,9 +7,9 @@
     <v-container class="fill-height">
       <v-col sm="10" offset-sm="1" md="8" offset-md="2">
       <v-row
-          cols="12"
-          sm="56"
-          md="143"
+          cols="1"
+          sm="5"
+          md="1"
         >
           <v-text-field
             v-model="data.searchText"

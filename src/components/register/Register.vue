@@ -82,7 +82,7 @@
 <script>
   export default {
     data: () => ({
-     links: [{text: 'Home', to: '/'},{text: 'Connexion', to: '/connexion'},{text: 'Enregistrer', to: '/register'}],
+     links: [{text: 'Home', to: '/'},{text: 'Connexion', to: '/connexion'},{text: 'Enregistrer', to: '/inscription'}],
       valid: true,
       password: '',
       passwordRules: [

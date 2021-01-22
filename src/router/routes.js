@@ -7,6 +7,8 @@ import Connexion from '@/views/Connexion.vue'
 import Recherche from '@/views/Recherche.vue'
 import Register from '@/views/Register.vue'
 import Profil from '@/views/Profil.vue'
+import Chat from '@/views/Messagerie.vue'
+
 
 export default [
   { path: '/', name: 'home', component: Home },
@@ -17,5 +19,7 @@ export default [
   { path: '/connexion', name: 'connexion', component: Connexion },
   { path: '/inscription', name: 'inscription', component: Register },
   { path: '/profil', name: 'profil', component: Profil },
+  { path: '/chat', name: 'chat', component: Chat},
+
   { path: '/thank-you', name: 'thankyou', component: ThankYou }
 ]

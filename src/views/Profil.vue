@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Register from '@/components/profil/Profil.vue'
+import Profil from '@/components/profil/Profil.vue'
 
 export default {
   components: {

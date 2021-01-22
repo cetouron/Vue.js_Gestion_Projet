@@ -1,8 +1,12 @@
 <template>
   <div>
     <v-app-bar>
+<v-toolbar-side-icon>
+        <v-img src='/img/products/logomin.png'/>
+    </v-toolbar-side-icon>  
+    
       <v-toolbar-title>Tut'up</v-toolbar-title>
-
+      
       <v-spacer></v-spacer>
 
       <!-- mobile menu button -->
@@ -28,10 +32,37 @@
           <v-icon>mdi-cart</v-icon>
           Propositions
         </v-btn>
-         <v-btn to="recherche" text>
+
+
+        <v-btn to="recherche" text>
           <v-icon>mdi-feature-search</v-icon>
-          Recherche
+          Recherche 
         </v-btn>
+
+
+<v-tooltip v-model="show"  bottom>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          @click="show = !show"
+        >
+        <v-icon>mdi-message</v-icon>
+          Message
+          </v-btn>
+      </template>
+      <Chat/>
+    </v-tooltip>
+
+
+
+    <!--     <v-btn @click="show = !show" text>
+          <v-icon>mdi-message</v-icon>
+          Message
+        </v-btn> -->
+
+        
 
         <v-btn to="connexion" text>
           <v-icon>mdi-account</v-icon>
@@ -39,6 +70,8 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
+
+
 
     <v-navigation-drawer
       v-model="drawer"
@@ -64,13 +97,24 @@
       </v-list>
     </v-navigation-drawer>
   </div>
+
+
+
+
+
 </template>
 
 <script>
+import Chat from '@/components/messagerie/Messagerie.vue'
+
 export default {
+  components: {
+    Chat
+  },
   data() {
     return {
       drawer: false,
+      show: false,
       items: [
         { title: 'Home', link: '/', icon: 'home' },
         { title: 'Store', link: 'store', icon: 'store' },

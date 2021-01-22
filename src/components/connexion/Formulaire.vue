@@ -60,7 +60,7 @@
       Annuler
     </v-btn>
     <br />
-    <v-btn block Link to="/register">
+    <v-btn block Link to="/inscription">
     Créer un compte
   </v-btn>
   
