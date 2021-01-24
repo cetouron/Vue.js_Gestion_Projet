@@ -12,7 +12,8 @@ export default [
     comm1:"Louis est un jeune garçon sérieux 👍",
     comm2:"Ma fille actuellement en Terminal adore Louis et redemande à avoir d'autres cours particulier avec lui plus souvent",
     comm3:'C vrémant quelkun de bain, mairci a Louis',
-    comm4:"Je mets 4 étoiles"
+    comm4:"Je mets 4 étoiles",
+    new: true
   },
   {
     image: '/img/products/livre.jpg',
@@ -26,7 +27,8 @@ export default [
     autres: "J'ai été championne de 110 mètre haies en CM2 et championne régionale des Hauts de France en aquabike. J'ai aussi des notions de Chinois.",
     comm1:"Juliette est vraiment super, elle aime les langues et sait partager sa passion",
     comm2:"Bonjour je veux reprendre rendez-vous, seriez vous disponible demain à 17h30 ?",
-    comm3:"Peut mieux faire, mon fils n'apprend vraiment rien et ces notes sont toujours aussi basses..."
+    comm3:"Peut mieux faire, mon fils n'apprend vraiment rien et ces notes sont toujours aussi basses...",
+    new: false
     },
   {
     image: '/img/products/livre.jpg',
@@ -41,7 +43,8 @@ export default [
     comm1:"Italien ? Physique-Chimie ? Géographie ? Thibault",
     comm2:"Une catastrophe ce garçon. Il arrive en retard, repart en avance, ne sait rien sur rien. Heureusement que je l'espionnais avec la webcam de mon fils, sinon je ne le saurais pas parce qu'il achète son silence.",
     comm3:'Trop cool, je conceil 5 étoile, bonne qualité de travail',
-    comm4:"merci bg"
+    comm4:"merci bg",
+    new: false
   },
   {
     image: '/img/products/livre.jpg',
@@ -56,7 +59,8 @@ export default [
     comm1:"Didier, quel prof ! Incroyablement cultivé et bon. Les résultats sont là.",
     comm2:"Passionnant autant en mathématique qu'en philosophie, Didier réssuit un tour de force.",
     comm3:'Vous en aurez pour votre argent. Cher mais justifié.',
-    comm4:"Merci Didier, revenez quand vous voulez."
+    comm4:"Merci Didier, revenez quand vous voulez.",
+    new: true
   },
   {
     image: '/img/products/livre.jpg',
@@ -71,7 +75,8 @@ export default [
     comm1:"On sent qu'elle veut bien faire, mais c'est une catastrophe...",
     comm2:"Si vous avez besoin d'argent, allez travailler à Macdo ou ailleurs, mais pas le tutorat",
     comm3:"Elle est partie en pleurant après que mon fils lui ai dit 'Non, j'ai pas envie'",
-    comm4:"Si vous l'appelez, bon courage."
+    comm4:"Si vous l'appelez, bon courage.",
+    new: true
   },
   {
     image: '/img/products/livre.jpg',
@@ -86,6 +91,7 @@ export default [
     comm1:"Il ne veut pas faire de l'ombre aux autres, mais vu son melon, quand il vous approche il fait d'un coup nuit.",
     comm2:"J'ai perdu 25 euros, et pour ceux qui le peuvent, fuyez. LOIN.",
     comm3:'Il a le boulard mais bon en Mathématique niveau CM2, ça le fait...',
-    comm4:"Bavard mais parle pour ne rien dire et ne rien faire."
+    comm4:"Bavard mais parle pour ne rien dire et ne rien faire.",
+    new: false
   }
 ]

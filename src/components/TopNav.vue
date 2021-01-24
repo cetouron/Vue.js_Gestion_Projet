@@ -28,10 +28,7 @@
         <v-icon>mdi-store</v-icon>
           Store
         </v-btn> -->
-        <v-btn to="cart" text>
-          <v-icon>mdi-cart</v-icon>
-          Propositions
-        </v-btn>
+  
 
 
         <v-btn to="recherche" text>
@@ -40,21 +37,75 @@
         </v-btn>
 
 
-<v-tooltip v-model="show"  bottom>
-      <template v-slot:activator="{ on, attrs }">
+<v-tooltip v-model="show" 
+           input-activator 
+           bottom 
+           fixed
+           :z-index="zIndex"
+           :value="overlay"
+           >
+      <template v-slot:activator="attrs" bottom>
         <v-btn
           color="primary"
           dark
-          v-bind="attrs"
-          @click="show = !show"
+          @click="mssg()"
         >
         <v-icon>mdi-message</v-icon>
           Message
           </v-btn>
       </template>
-      <Chat/>
+
+      
+      <Chat/>  
     </v-tooltip>
 
+
+
+    <v-tooltip v-model="showP" 
+           input-activator 
+           bottom 
+           fixed
+           :z-index="zIndex"
+           :value="overlay"
+           >
+      <template v-slot:activator="attrs" bottom>
+        <v-btn
+          dark
+          @click="prfl()"
+        >
+        <v-icon>mdi-account</v-icon>
+          Profil Eleve
+          </v-btn>
+      </template>
+
+      <div v-if="profil='eleve'"> </div>
+      <ProfilEleve/>  
+      <div v-if="profil='tuteur'"> </div>
+
+    </v-tooltip>
+
+ <v-tooltip v-model="showPT" 
+           input-activator 
+           bottom 
+           fixed
+           :z-index="zIndex"
+           :value="overlay"
+           >
+      <template v-slot:activator="attrs" bottom>
+        <v-btn
+          dark
+          @click="prflT()"
+        >
+        <v-icon>mdi-account</v-icon>
+          Profil Tuteur
+          </v-btn>
+      </template>
+
+      <div v-if="profil='eleve'"> </div>
+      <ProfilTuteur/>  
+      <div v-if="profil='tuteur'"> </div>
+
+    </v-tooltip>
 
 
     <!--     <v-btn @click="show = !show" text>
@@ -63,11 +114,11 @@
         </v-btn> -->
 
         
-
+ <!--
         <v-btn to="connexion" text>
           <v-icon>mdi-account</v-icon>
           Connexion
-        </v-btn>
+        </v-btn> -->
       </v-toolbar-items>
     </v-app-bar>
 
@@ -106,15 +157,29 @@
 
 <script>
 import Chat from '@/components/messagerie/Messagerie.vue'
+import ProfilEleve from '@/components/profilEleve/ProfilEleve.vue'
+import ProfilTuteur from '@/components/profilTuteur/ProfilTuteur.vue'
+
+
 
 export default {
   components: {
-    Chat
+    Chat,
+    ProfilEleve,
+    ProfilTuteur
+  },
+  methods: {
+    mssg: function() { this.showP = false; this.showPT = false; this.show = !this.show;},
+    prfl: function() { this.show = false; this.showPT = false; this.showP = !this.showP;},
+    prflT: function() { this.show = false; this.showP = false; this.showPT = !this.showPT;},
+
   },
   data() {
     return {
       drawer: false,
       show: false,
+      showP: false,
+      showPT: false,
       items: [
         { title: 'Home', link: '/', icon: 'home' },
         { title: 'Store', link: 'store', icon: 'store' },

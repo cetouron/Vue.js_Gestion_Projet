@@ -4,7 +4,7 @@
     dark
     align="center"
     max-width="400"
-
+    
   >
   <v-tabs
       v-model="tab"
@@ -15,6 +15,7 @@
           <v-tabs-slider color="teal lighten-3"></v-tabs-slider>
 
       <v-tab
+      centered
         v-for= "item in products"
             :key="item.name"
             >
@@ -31,6 +32,16 @@
                  <img :src= item.image>
      </v-avatar> 
         </v-badge>
+
+        <v-badge
+        color="#FFFFFF0"
+        bottom
+         v-else
+        >
+          <v-avatar size="25" >
+                 <img :src= item.image>
+     </v-avatar> 
+        </v-badge>
     
      </v-row>
     <v-row>
@@ -40,19 +51,19 @@
       </v-tab>
     </v-tabs>
 
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="currentItem">
       <v-tab-item
-        v-for="item in reponse"
-        :key="item.idmess"
+        v-for="messages in message"
+        :key="messages.idmess"
       >
-    <div v-if="item.user === 'me'">
+    <div v-if="messages.user === 'me'">
         <v-card flat>
-          <v-card-text align='right'>{{ item.content }}</v-card-text>
+          <v-card-text align='right'>{{ messages.content }}</v-card-text>
         </v-card>
     </div>
      <div v-else>
         <v-card flat>
-          <v-card-text align='left'>{{ item.content }}</v-card-text>
+          <v-card-text align='left'>{{ messages.content }}</v-card-text>
         </v-card>
     </div>
       </v-tab-item>
@@ -107,10 +118,12 @@ import { mapState } from 'vuex'
         }
     },
       computed: {
-    ...mapState(['products', 'cart']),
+    ...mapState(['products', 'messages', 'cart']),
     message: function(){
 
-return this.products
+return this.messages
+        .filter((item) => {
+                return item.user.includes("me"); })
     },
 
     reponse: function(){ 

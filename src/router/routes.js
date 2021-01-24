@@ -8,7 +8,8 @@ import Recherche from '@/views/Recherche.vue'
 import Register from '@/views/Register.vue'
 import Profil from '@/views/Profil.vue'
 import Chat from '@/views/Messagerie.vue'
-
+import ProfilEleve from '@/views/ProfilEleve.vue'
+import ProfilTuteur from '@/views/ProfilTuteur.vue'
 
 export default [
   { path: '/', name: 'home', component: Home },
@@ -20,6 +21,8 @@ export default [
   { path: '/inscription', name: 'inscription', component: Register },
   { path: '/profil', name: 'profil', component: Profil },
   { path: '/chat', name: 'chat', component: Chat},
+  { path: '/profilEleve', name: 'profilEleve', component: ProfilEleve},
+  { path: '/profilTuteur', name: 'profilTuteur', component: ProfilTuteur},
 
   { path: '/thank-you', name: 'thankyou', component: ThankYou }
 ]
